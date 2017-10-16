@@ -91,3 +91,4 @@ fabric.properties
 
 ### Custom
 .ask
+!.ask/config.example

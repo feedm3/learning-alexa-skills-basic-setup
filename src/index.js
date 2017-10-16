@@ -1,54 +1,50 @@
 'use strict';
-var Alexa = require("alexa-sdk");
+const Alexa = require("alexa-sdk");
 
-// For detailed tutorial on how to making a Alexa skill,
-// please visit us at http://alexa.design/build
-
-
-exports.handler = function(event, context) {
-    var alexa = Alexa.handler(event, context);
+exports.handler = function (event, context) {
+    const alexa = Alexa.handler(event, context);
     alexa.registerHandlers(handlers);
     alexa.execute();
 };
 
-var handlers = {
-    'LaunchRequest': function () {
+const handlers = {
+    'LaunchRequest'() {
         this.emit('SayHello');
     },
-    'HelloWorldIntent': function () {
+    'HelloWorldIntent'() {
         this.emit('SayHello');
     },
-    'MyNameIsIntent': function () {
+    'MyNameIsIntent'() {
         this.emit('SayHelloName');
     },
-    'SayHello': function () {
+    'SayHello'() {
         this.response.speak('Hello World!')
-                     .cardRenderer('hello world', 'hello world');
+            .cardRenderer('hello world', 'hello world');
         this.emit(':responseReady');
     },
-    'SayHelloName': function () {
-        var name = this.event.request.intent.slots.name.value;
+    'SayHelloName'() {
+        const name = this.event.request.intent.slots.name.value;
         this.response.speak('Hello ' + name)
             .cardRenderer('hello world', 'hello ' + name);
         this.emit(':responseReady');
     },
-    'SessionEndedRequest' : function() {
+    'SessionEndedRequest'() {
         console.log('Session ended with reason: ' + this.event.request.reason);
     },
-    'AMAZON.StopIntent' : function() {
+    'AMAZON.StopIntent'() {
         this.response.speak('Bye');
         this.emit(':responseReady');
     },
-    'AMAZON.HelpIntent' : function() {
+    'AMAZON.HelpIntent'() {
         this.response.speak("You can try: 'alexa, hello world' or 'alexa, ask hello world my" +
             " name is awesome Aaron'");
         this.emit(':responseReady');
     },
-    'AMAZON.CancelIntent' : function() {
+    'AMAZON.CancelIntent'() {
         this.response.speak('Bye');
         this.emit(':responseReady');
     },
-    'Unhandled' : function() {
+    'Unhandled'() {
         this.response.speak("Sorry, I didn't get that. You can try: 'alexa, hello world'" +
             " or 'alexa, ask hello world my name is awesome Aaron'");
     }

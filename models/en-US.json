@@ -38,9 +38,7 @@
                     "samples":[
                         "my name is {name}",
                         "i am {name}",
-                        "you can call me {name}",
-                        "hello world",
-                        "hi dude"
+                        "you can call me {name}"
                     ]
                 }
             ]

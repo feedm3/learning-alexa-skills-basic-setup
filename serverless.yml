@@ -1,4 +1,4 @@
-service: alexa-skill-cat-facts
+service: alexa-skill-hello-world
 
 provider:
   name: aws
@@ -11,6 +11,6 @@ provider:
 functions:
   skill:
     handler: src/index.handler
-    description: Alexa skill to learn something about cats
+    description: Alexa hello world skill
     events:
       - alexaSkill
