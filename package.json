@@ -1,0 +1,17 @@
+{
+  "name": "skill-sample-nodejs-hello-world",
+  "version": "1.0.0",
+  "description": "Hello world sample skill",
+  "scripts": {
+    "deploy:init": "serverless deploy",
+    "deploy": "serverless deploy function --function skill",
+    "deploy-skill": "ask deploy",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "alexa-sdk": "^1.0.14"
+  },
+  "devDependencies": {
+    "serverless": "^1.23.0"
+  }
+}
