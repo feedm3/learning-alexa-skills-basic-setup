@@ -1,0 +1,47 @@
+{
+    "interactionModel":{
+        "languageModel":{
+            "invocationName":"hallo welt",
+            "types":[],
+            "intents":[
+                {
+                  "name": "AMAZON.CancelIntent",
+                  "samples": []
+                },
+                {
+                  "name": "AMAZON.HelpIntent",
+                  "samples": []
+                },
+                {
+                  "name": "AMAZON.StopIntent",
+                  "samples": []
+                },
+                {
+                    "name":"HelloWorldIntent",
+                    "slots":[
+
+                    ],
+                    "samples":[
+                        "hallo",
+                        "sage hallo",
+                        "sage hallo welt"
+                    ]
+                },
+                {
+                    "name":"MyNameIsIntent",
+                    "slots":[
+                        {
+                            "name":"name",
+                            "type":"AMAZON.DE_FIRST_NAME"
+                        }
+                    ],
+                    "samples":[
+                        "mein name ist {name}",
+                        "ich bin {name}",
+                        "dass mein name {name} ist"
+                    ]
+                }
+            ]
+        }
+    }
+}

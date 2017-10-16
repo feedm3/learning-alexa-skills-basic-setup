@@ -11,6 +11,16 @@
           ],
           "name": "basic-setup-hello-world",
           "description": "Sample Full Description"
+        },
+        "de-DE": {
+          "summary": "Hier sollte eine kurze Beschreibung stehen",
+          "examplePhrases": [
+            "Alexa öffne hallo welt",
+            "Alexa sage hallo welt ich bin Pater",
+            "Alexa sage hallo welt dass mein name Peter ist"
+          ],
+          "name": "basic-setup-hallo-welt",
+          "description": "Hier sollte die detaillierte Beschreibung stehen"
         }
       },
       "isAvailableWorldwide": true,
