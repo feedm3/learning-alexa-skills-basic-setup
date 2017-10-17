@@ -1,4 +1,5 @@
 'use strict';
+
 const Alexa = require("alexa-sdk");
 const language = require('./speech-output');
 
