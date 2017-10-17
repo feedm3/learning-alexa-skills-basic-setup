@@ -4,7 +4,8 @@ This repo is used as template for an alexa skill. It uses a best practice setup 
 framework. All tools come out of the box and you can deploy not only the code but also the developer console stuff like
 intents, models and skill-store informations. The example skill in the repo is configured for us-english and german.
 
-The details and motivations are explained in a medium post: [https://medium.com/@feedm3/alexa-skill-development-done-right-basic-setup-4448d65e46ba](https://medium.com/@feedm3/alexa-skill-development-done-right-basic-setup-4448d65e46ba)
+The details and motivations are explained in a 
+[medium post](https://medium.com/@feedm3/alexa-skill-development-done-right-basic-setup-4448d65e46ba).
 
 ## Prerequisites
 
