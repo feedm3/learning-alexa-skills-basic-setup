@@ -1,0 +1,19 @@
+{
+  "deploy_settings": {
+    "default": {
+      "skill_id": "YOUR_SKILL_ID",
+      "was_cloned": false,
+      "merge": {
+        "skillManifest": {
+          "apis": {
+            "custom": {
+              "endpoint": {
+                "uri": "YOUR_LAMBDA_ARN"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

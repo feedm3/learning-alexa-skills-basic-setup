@@ -90,5 +90,5 @@ crashlytics-build.properties
 fabric.properties
 
 ### Custom
-.ask
+.ask/*
 !.ask/config.example
