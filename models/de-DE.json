@@ -38,7 +38,8 @@
                     "samples":[
                         "mein name ist {name}",
                         "ich bin {name}",
-                        "dass mein name {name} ist"
+                        "dass mein name {name} ist",
+                        "dass ich {name} heiße"
                     ]
                 }
             ]

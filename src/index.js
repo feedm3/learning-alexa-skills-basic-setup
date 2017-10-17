@@ -1,8 +1,10 @@
 'use strict';
 const Alexa = require("alexa-sdk");
+const language = require('./speech-output');
 
 exports.handler = function (event, context) {
     const alexa = Alexa.handler(event, context);
+    alexa.resources = language;
     alexa.registerHandlers(handlers);
     alexa.execute();
 };
@@ -18,27 +20,25 @@ const handlers = {
         this.emit('SayHelloName');
     },
     'SayHello'() {
-        this.emit(':tell', 'Hello');
+        this.emit(':tell', this.t('HELLO'));
     },
     'SayHelloName'() {
         const name = this.event.request.intent.slots.name.value;
-        this.emit(':tell', 'Hello ' + name);
+        this.emit(':tell', this.t('HELLO_NAME', { name: name }));
     },
     'SessionEndedRequest'() {
         console.log('Session ended with reason: ' + this.event.request.reason);
     },
     'AMAZON.StopIntent'() {
-        this.emit(':tell', 'Bye');
+        this.emit(':tell', this.t('BYE'));
     },
     'AMAZON.HelpIntent'() {
-        this.emit(':tell', "You can try: 'alexa, hello world' or 'alexa, ask hello world my" +
-            " name is awesome Aaron'");
+        this.emit(':tell', this.t('HELP'));
     },
     'AMAZON.CancelIntent'() {
-        this.emit(':tell', 'Bye');
+        this.emit(':tell', this.t('BYE'));
     },
     'Unhandled'() {
-        this.emit(':tell', "Sorry, I didn't get that. You can try: 'alexa, hello world'" +
-            " or 'alexa, ask hello world my name is awesome Aaron'");
+        this.emit(':tell', this.t('UNHANDLED'));
     }
 };
