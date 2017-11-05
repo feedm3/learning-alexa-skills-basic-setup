@@ -21,15 +21,15 @@ template.
 After you have created the skill in the developer console do the following:
 
 1. Clone this repo
-2. Setup the [ask cli](https://developer.amazon.com/de/docs/smapi/quick-start-alexa-skills-kit-command-line-interface.html) 
-and [aws credentials](https://serverless.com/framework/docs/providers/aws/guide/credentials/)
+2. Setup your [aws credentials](https://serverless.com/framework/docs/providers/aws/guide/credentials/)
 3. Rename the [`config.example`](./.ask/config.example) to `config` and replace `YOUR_SKILL_ID` with the skill id you copied
 4. Run `npm install`
 5. Deploy the skills function with `npm run deploy:init`. 
 6. Display the functions ARN with `npm run deploy:info`. Copy the ARN, but without the trailing number (should be ':1') 
-to point to the latest version everytime you redeploy your code.
-7. Do another replacement in the [`config`](./.ask/config) file. Replace `YOUR_LAMBDA_ARN` with the ARN you copied.
-8. Deploy your skills information with `npm run deploy-skill`
+to point to the latest version every time you redeploy your code.
+7. Replace `YOUR_LAMBDA_ARN` with the ARN you copied in the [`config`](./.ask/config) file
+8. Run `npm run deploy-skill:init` to connect your setup with your amazon developer console 
+9. Deploy your skills information with `npm run deploy-skill`
 
 You can now go to the skill store, activate your skill and try it out :)
 
@@ -57,7 +57,7 @@ defines your infrastructure and "links" it to code.
 All settings from the developer console are defined in the [`.ask/config`](.ask/config), [`skill.json`](skill.json) and 
 the language specific models in the [`models`](models) folder.
 
-- `npm run deploy-skill:init`: connect this project with your amazon developer console (you nonly have to do this once)
+- `npm run deploy-skill:init`: connect this project with your amazon developer console (you only have to do this once)
 - `npm run deploy-skill`: upload the configuration files to the amazon developer console
 
 > Note: The current ask cli doesn’t support updating the models json when you changed it with the skill builder. It 
