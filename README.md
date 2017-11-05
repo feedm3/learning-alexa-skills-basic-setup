@@ -57,7 +57,8 @@ defines your infrastructure and "links" it to code.
 All settings from the developer console are defined in the [`.ask/config`](.ask/config), [`skill.json`](skill.json) and 
 the language specific models in the [`models`](models) folder.
 
-When you change something there you can hit `npm run deploy-skill` to update the configuration to the developer console.
+- `npm run deploy-skill:init`: connect this project with your amazon developer console (you nonly have to do this once)
+- `npm run deploy-skill`: upload the configuration files to the amazon developer console
 
 > Note: The current ask cli doesn’t support updating the models json when you changed it with the skill builder. It 
 can only clone the complete project and overriding the current one. A workaround after doing some stuff with the skill
