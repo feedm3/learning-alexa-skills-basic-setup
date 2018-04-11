@@ -10,14 +10,12 @@
     "deploy": "serverless deploy function --function skill",
     "deploy:info": "serverless info --verbose",
     "deploy-skill": "ask deploy",
-    "deploy-skill:init": "ask init",
     "logs:tail": "serverless logs --tail --function skill"
   },
   "dependencies": {
-    "alexa-sdk": "^1.0.18"
+    "alexa-sdk": "^1.0.25"
   },
   "devDependencies": {
-    "ask-cli": "^1.0.0-beta.4",
-    "serverless": "^1.24.0"
+    "serverless": "^1.26.1"
   }
 }
